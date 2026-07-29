@@ -7,6 +7,8 @@ handoff as a **high-fidelity** recreation in a real codebase.
 **Stack:** Next.js 14 (App Router) · React 18 · TypeScript. Design tokens, type scale,
 spacing, radii, shadows, motion and copy are ported directly from the handoff.
 
+**Live site:** https://shibam-motomate.github.io/onRise/ (GitHub Pages — see Deployment).
+
 ## Getting started
 
 ```bash
@@ -44,6 +46,30 @@ npm start        # serve the production build
   `MobileNav`, `MobileTabBar`, `Toast`) and shared UI (`ProductCard`, `Placeholder`, `icons`).
 - `src/app/` — one route per screen; `globals.css` holds design tokens, keyframes,
   the single 760px responsive breakpoint and hover utilities.
+
+## Deployment (GitHub Pages)
+
+The app is configured as a **static export** (`output: 'export'` in `next.config.mjs`),
+so the whole storefront — all 13 routes — deploys to GitHub Pages as static files.
+
+`.github/workflows/deploy-pages.yml` builds and publishes on every push to `main` or
+`dev` (and can be run manually from the **Actions** tab). It builds with
+`NEXT_PUBLIC_BASE_PATH=/onRise` so asset URLs resolve under the repo subpath.
+
+**One-time setup:** in the repo, go to **Settings → Pages → Build and deployment →
+Source: GitHub Actions**. (If a deploy from `dev` is blocked, add `dev` under
+**Settings → Environments → github-pages → Deployment branches**, or merge to the
+default branch.) After the first successful run the site is live at
+`https://shibam-motomate.github.io/onRise/`.
+
+To build the static site locally:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/onRise npm run build   # outputs ./out
+```
+
+Hosting elsewhere (Vercel/Netlify/root domain) needs no base path — just
+`npm run build` with `NEXT_PUBLIC_BASE_PATH` unset.
 
 ## Design tokens
 
