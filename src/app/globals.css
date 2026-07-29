@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* ============ Design tokens ============ */
+:root {
+  --bg: #F5F2EC;
+  --surface: #FFFFFF;
+  --surface-warm: #F0EBE1;
+  --surface-alt2: #EEE9DE;
+  --img-ph: #EAE0CD;
+  --ink: #332F28;
+  --ink-muted: #6E6252;
+  --ink-subtle: #857766;
+  --forest: #26332B;
+  --forest-deep: #1F2A23;
+  --sage: #5E7A63;
+  --sage-light: #6E8A72;
+  --sage-soft: #7E9A82;
+  --sage-pale: #EEF3EC;
+  --sage-tint: #E1E8DD;
+  --sand-line: #E8DDCA;
+  --sand-line2: #EAE0CE;
+  --dashed: #D4C6AE;
+  --gold: #D8C49A;
+  --serif: 'Marcellus', serif;
+  --sans: 'Hanken Grotesk', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #E4D6BC; color: #2A251F; }
+a { color: #5E7A63; text-decoration: none; }
+a:hover { color: #3A473E; }
+button { font-family: inherit; }
+input, textarea { font-family: inherit; }
+
+/* ============ Keyframes ============ */
+@keyframes deoFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes deoToast { 0% { opacity: 0; transform: translateY(12px); } 12%,88% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-6px); } }
+@keyframes deoMist { 0%,100% { transform: translateX(0); opacity: .5; } 50% { transform: translateX(-24px); opacity: .8; } }
+@keyframes deoOverlay { from { opacity: 0; } to { opacity: 1; } }
+@keyframes deoDrawerIn { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes deoSheetIn { from { transform: translateY(-18px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ============ Responsive helpers (single breakpoint at 760px) ============ */
+.rburger { display: none; }
+.rtab { display: none; }
+@media (max-width: 760px) {
+  .rnav { display: none !important; }
+  .rburger { display: flex !important; }
+  .rtab { display: flex !important; }
+  .rroot { padding-bottom: 66px !important; }
+  .rw { padding-left: 18px !important; padding-right: 18px !important; }
+  .rc1, .rcfoot { grid-template-columns: 1fr !important; }
+  .rc2 { grid-template-columns: 1fr 1fr !important; }
+  .rhero { height: 440px !important; }
+  .rhh { font-size: 40px !important; }
+  .rb { font-size: 27px !important; line-height: 1.16 !important; }
+}
+
+/* ============ Hover utilities (replaces prototype style-hover) ============ */
+.hv-primary { transition: background .18s ease; }
+.hv-primary:hover { background: #3E4E44 !important; }
+.hv-cream { transition: background .18s ease; }
+.hv-cream:hover { background: #ECE4D5 !important; }
+.hv-tint:hover { background: #EEE9DE !important; }
+.hv-tint2:hover { background: #EAE1D0 !important; }
+.hv-lift { transition: box-shadow .18s ease, transform .18s ease; }
+.hv-lift:hover { box-shadow: 0 14px 34px rgba(24,32,26,.12); }
+.hv-lift-card { transition: box-shadow .18s ease, transform .18s ease; }
+.hv-lift-card:hover { box-shadow: 0 18px 44px rgba(24,32,26,.10); transform: translateY(-3px); }
+.hv-shadow:hover { box-shadow: 0 16px 40px rgba(24,32,26,.10); }
+.hv-shadow-strong:hover { box-shadow: 0 16px 38px rgba(24,32,26,.12); }
+.hv-shadow-insta:hover { box-shadow: 0 18px 40px rgba(24,32,26,.22); }
+.hv-link { transition: color .15s ease; cursor: pointer; }
+.hv-link:hover { color: #3A473E; }
+.hv-link-cream:hover { color: #F5F2EB !important; }
+.hv-link-sage:hover { color: #5E7A63 !important; }
+.hv-fade:hover { opacity: .7; }
+.hv-fade75:hover { opacity: .75; }
+.hv-fade85:hover { opacity: .85; }
+.hv-row:hover { background: rgba(255,255,255,.06) !important; }
+.hv-faq:hover { background: #FBF7EE !important; }
+.hv-danger:hover { background: #F5ECEC !important; }
+.hv-navrow:hover { background: rgba(126,154,130,.15) !important; }
+.hv-apply:hover { background: #CBD9C7 !important; }
+.hv-subscribe:hover { background: #4C6B52 !important; }
+.hv-buynow:hover { background: #FBF6EC !important; }
+
+/* focus states for inputs matching prototype */
+.deo-input:focus { border-color: #5E7A63 !important; }
+
+/* insta play button reveal */
+.insta-tile .insta-play { opacity: 0; transition: opacity .2s ease; }
+.insta-tile:hover .insta-play { opacity: 1; }
+
+/* horizontal scroll strips */
+.hscroll { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 18px; -webkit-overflow-scrolling: touch; }
+.hscroll > * { scroll-snap-align: start; }
