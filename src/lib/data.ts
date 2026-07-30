@@ -1,4 +1,4 @@
-// OnRise storefront data model.
+// Antoleena storefront data model.
 // Ported from the design prototype. Products, prices, reviews, orders and
 // addresses are realistic placeholders, to be replaced by real API data.
 
@@ -11,7 +11,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  { name: 'OnRise Mid-Century Sideboard', price: '$749.00', category: 'Living Room', rating: '4.8', blurb: 'Walnut-toned sideboard with soft white drawers for calm, modern storage.' },
+  { name: 'Antoleena Mid-Century Sideboard', price: '$749.00', category: 'Living Room', rating: '4.8', blurb: 'Walnut-toned sideboard with soft white drawers for calm, modern storage.' },
   { name: 'Kanchen Lounge Chair', price: '$189.00', category: 'Living Room', rating: '4.9', blurb: 'Sleek lines and woven texture bring cozy hill-house style to any corner.' },
   { name: 'Teesta Modular Sofa', price: '$899.00', category: 'Living Room', rating: '4.7', blurb: 'Spacious, adaptable and ultra-comfortable — perfect for slow family evenings.' },
   { name: 'Rongli Velvet Dining Chairs', price: '$299.00', category: 'Dining & Kitchen', rating: '4.6', blurb: 'A pair of softly upholstered chairs in muted sage velvet.' },
@@ -73,7 +73,7 @@ export const brandValues = [
   { icon: '\u{1F69A}', label: 'Hassle-Free Delivery' },
 ];
 
-export const favoriteNames = ['OnRise Mid-Century Sideboard', 'Kanchen Lounge Chair', 'Teesta Modular Sofa'];
+export const favoriteNames = ['Antoleena Mid-Century Sideboard', 'Kanchen Lounge Chair', 'Teesta Modular Sofa'];
 
 export const instaPosts = [
   { caption: 'Misty morning styling', likes: '1.2k', views: '48k' },
@@ -99,13 +99,13 @@ export const inspirationTiles = [
 export const user = { name: 'Pema Rai', email: 'pema.rai@example.com', initials: 'PR', memberSince: '2025' };
 
 export const accountOrders = [
-  { no: 'DEO-482013', date: 'Jul 20, 2026', status: 'In Transit', badge: '#EEF3EC', badgeText: '#4C6B52', total: '$1,144.00', items: '2 items' },
-  { no: 'DEO-471880', date: 'Jun 02, 2026', status: 'Delivered', badge: '#EEE9DE', badgeText: '#5B6A5F', total: '$245.00', items: '1 item' },
-  { no: 'DEO-460219', date: 'Apr 18, 2026', status: 'Delivered', badge: '#EEE9DE', badgeText: '#5B6A5F', total: '$899.00', items: '1 item' },
+  { no: 'DEO-482013', date: 'Jul 20, 2026', status: 'In Transit', badge: '#EDEFDF', badgeText: '#5E6B3B', total: '$1,144.00', items: '2 items' },
+  { no: 'DEO-471880', date: 'Jun 02, 2026', status: 'Delivered', badge: '#ECE3D1', badgeText: '#5B6A5F', total: '$245.00', items: '1 item' },
+  { no: 'DEO-460219', date: 'Apr 18, 2026', status: 'Delivered', badge: '#ECE3D1', badgeText: '#5B6A5F', total: '$899.00', items: '1 item' },
 ];
 
 export const userReels = [
-  { caption: 'Kanchen chair — first look', status: 'Published', badge: '#EEF3EC', badgeText: '#4C6B52', views: '3.4k', likes: '210' },
+  { caption: 'Kanchen chair — first look', status: 'Published', badge: '#EDEFDF', badgeText: '#5E6B3B', views: '3.4k', likes: '210' },
   { caption: 'Mirik table unboxing', status: 'In review', badge: '#FBF1E6', badgeText: '#9A6B32', views: '—', likes: '—' },
 ];
 

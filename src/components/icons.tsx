@@ -2,7 +2,7 @@ import React from 'react';
 
 type P = React.SVGProps<SVGSVGElement> & { size?: number };
 
-export const LogoMark = ({ stroke = '#F2EFE6', accent = '#7E9A82', size = 30, showAccent = true }: { stroke?: string; accent?: string; size?: number; showAccent?: boolean }) => (
+export const LogoMark = ({ stroke = '#F2EFE6', accent = '#8C946A', size = 30, showAccent = true }: { stroke?: string; accent?: string; size?: number; showAccent?: boolean }) => (
   <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
     <path d="M4 32 L15 13 L21 22 L27 10 L36 32 Z" fill="none" stroke={stroke} strokeWidth="2.1" strokeLinejoin="round" />
     {showAccent && <path d="M11.5 20.5 L15 13 L18.4 18" stroke={accent} strokeWidth="2.1" strokeLinejoin="round" fill="none" />}
@@ -42,19 +42,19 @@ export const ChevDown = ({ color = '#C4B79D', size = 12 }: { color?: string; siz
   </svg>
 );
 
-export const ArrowRight = ({ color = '#F5F2EB', size = 15 }: { color?: string; size?: number }) => (
+export const ArrowRight = ({ color = '#F5EFE3', size = 15 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <path d="M5 12h14M13 6l6 6-6 6" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
-export const ChevLeft = ({ color = '#332F28', size = 18 }: { color?: string; size?: number }) => (
+export const ChevLeft = ({ color = '#382D21', size = 18 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <path d="M15 6l-6 6 6 6" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
-export const ChevRight = ({ color = '#F5F2EB', size = 18 }: { color?: string; size?: number }) => (
+export const ChevRight = ({ color = '#F5EFE3', size = 18 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <path d="M9 6l6 6-6 6" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
@@ -66,7 +66,7 @@ export const Star = ({ color = '#C79A3E', size = 15 }: { color?: string; size?: 
   </svg>
 );
 
-export const InstagramIcon = ({ color = '#5E7A63', size = 17 }: { color?: string; size?: number }) => (
+export const InstagramIcon = ({ color = '#6E7A45', size = 17 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <rect x="3" y="3" width="18" height="18" rx="5" stroke={color} strokeWidth="1.7" />
     <circle cx="12" cy="12" r="4" stroke={color} strokeWidth="1.7" />
@@ -74,20 +74,20 @@ export const InstagramIcon = ({ color = '#5E7A63', size = 17 }: { color?: string
   </svg>
 );
 
-export const HeartFill = ({ color = '#F5F2EB', size = 15 }: { color?: string; size?: number }) => (
+export const HeartFill = ({ color = '#F5EFE3', size = 15 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
     <path d="M12 21s-7.5-4.6-10-9.2C.6 8.8 2 5.5 5.2 5.5c2 0 3.2 1.2 3.8 2.3.6-1.1 1.8-2.3 3.8-2.3 3.2 0 4.6 3.3 3.2 6.3C19.5 16.4 12 21 12 21z" />
   </svg>
 );
 
-export const EyeIcon = ({ color = '#F5F2EB', size = 15 }: { color?: string; size?: number }) => (
+export const EyeIcon = ({ color = '#F5EFE3', size = 15 }: { color?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke={color} strokeWidth="1.7" />
     <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="1.7" />
   </svg>
 );
 
-export const Check = ({ color = '#5E7A63', size = 30, strokeWidth = 2.4 }: { color?: string; size?: number; strokeWidth?: number }) => (
+export const Check = ({ color = '#6E7A45', size = 30, strokeWidth = 2.4 }: { color?: string; size?: number; strokeWidth?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <path d="M5 12.5l4.5 4.5L19 7" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
   </svg>

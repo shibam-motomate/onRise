@@ -4,7 +4,8 @@ import React from 'react';
 import { useStore } from '@/lib/store';
 import { useNav } from '@/lib/nav';
 import { user } from '@/lib/data';
-import { LogoMark, SearchIcon, UserIcon, CartIcon, BurgerIcon, ChevDown } from './icons';
+import { SearchIcon, UserIcon, CartIcon, BurgerIcon, ChevDown } from './icons';
+import { BrandLogo } from './Brand';
 
 const accountMenu = [
   { id: 'overview', label: 'Overview' },
@@ -26,20 +27,17 @@ export function Header() {
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        background: 'rgba(30,42,33,.93)',
+        background: 'rgba(48,38,26,.94)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
-        borderBottom: '1px solid rgba(126,154,130,.28)',
+        borderBottom: '1px solid rgba(190,160,110,.26)',
       }}
     >
       <div
         className="rw"
         style={{ maxWidth: 1240, margin: '0 auto', padding: '17px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
       >
-        <div onClick={nav.home} style={{ display: 'flex', alignItems: 'center', gap: 11, cursor: 'pointer' }}>
-          <LogoMark size={30} />
-          <span style={{ fontFamily: 'var(--serif)', fontSize: 22, letterSpacing: '.34em', color: '#F2EFE6' }}>ONRISE</span>
-        </div>
+        <BrandLogo size="md" onDark tagline onClick={nav.home} />
 
         <div
           className="rburger"
@@ -67,19 +65,19 @@ export function Header() {
               <div
                 onClick={s.toggleMenu}
                 className="hv-navrow"
-                style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 9, padding: '5px 12px 5px 6px', border: '1px solid rgba(126,154,130,.42)', borderRadius: 999 }}
+                style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 9, padding: '5px 12px 5px 6px', border: '1px solid rgba(190,160,110,.42)', borderRadius: 999 }}
               >
-                <span style={{ width: 28, height: 28, borderRadius: '50%', background: '#7E9A82', color: '#F5F2EB', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--serif)', fontSize: 12.5 }}>{user.initials}</span>
+                <span style={{ width: 28, height: 28, borderRadius: '50%', background: '#8C946A', color: '#F5EFE3', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--serif)', fontSize: 12.5 }}>{user.initials}</span>
                 <span style={{ fontSize: 14, color: '#F2EFE6', fontWeight: 500 }}>{userFirstName}</span>
                 <ChevDown />
               </div>
               {s.menuOpen && (
-                <div style={{ position: 'absolute', top: 'calc(100% + 10px)', right: 0, width: 214, background: '#fff', border: '1px solid #E8DDCA', borderRadius: 12, boxShadow: '0 16px 40px rgba(24,32,26,.14)', padding: 8, zIndex: 60 }}>
+                <div style={{ position: 'absolute', top: 'calc(100% + 10px)', right: 0, width: 214, background: '#fff', border: '1px solid #E5D7BE', borderRadius: 12, boxShadow: '0 16px 40px rgba(24,32,26,.14)', padding: 8, zIndex: 60 }}>
                   <div style={{ padding: '8px 12px 10px' }}>
-                    <div style={{ fontSize: 14, fontWeight: 600, color: '#332F28' }}>{user.name}</div>
+                    <div style={{ fontSize: 14, fontWeight: 600, color: '#382D21' }}>{user.name}</div>
                     <div style={{ fontSize: 12.5, color: '#9A8D7C', marginTop: 2 }}>{user.email}</div>
                   </div>
-                  <div style={{ height: 1, background: '#EEE9DE', margin: '2px 0 6px' }} />
+                  <div style={{ height: 1, background: '#ECE3D1', margin: '2px 0 6px' }} />
                   {accountMenu.map((m) => (
                     <div
                       key={m.id}
@@ -88,12 +86,12 @@ export function Header() {
                         nav.push(`/account?tab=${m.id}`);
                       }}
                       className="hv-tint"
-                      style={{ cursor: 'pointer', padding: '9px 12px', borderRadius: 7, fontSize: 14, color: '#3A473E' }}
+                      style={{ cursor: 'pointer', padding: '9px 12px', borderRadius: 7, fontSize: 14, color: '#574936' }}
                     >
                       {m.label}
                     </div>
                   ))}
-                  <div style={{ height: 1, background: '#EEE9DE', margin: '6px 0' }} />
+                  <div style={{ height: 1, background: '#ECE3D1', margin: '6px 0' }} />
                   <div
                     onClick={() => {
                       s.signOut();
@@ -116,7 +114,7 @@ export function Header() {
 
           <div onClick={s.openCart} className="hv-fade75" style={{ position: 'relative', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
             <CartIcon />
-            <span style={{ position: 'absolute', top: -8, right: -11, background: '#7E9A82', color: '#F5F2EB', fontSize: 11, fontWeight: 700, minWidth: 18, height: 18, borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{s.cartCount}</span>
+            <span style={{ position: 'absolute', top: -8, right: -11, background: '#8C946A', color: '#F5EFE3', fontSize: 11, fontWeight: 700, minWidth: 18, height: 18, borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{s.cartCount}</span>
           </div>
         </div>
       </div>

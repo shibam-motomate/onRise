@@ -10,7 +10,7 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 function CountBox({ value, label, gold }: { value: string; label: string; gold?: boolean }) {
   return (
     <div style={{ background: 'rgba(255,255,255,.08)', border: '1px solid #3C4A41', borderRadius: 12, padding: '16px 8px', minWidth: 78 }}>
-      <div className="rb" style={{ fontFamily: 'var(--serif)', fontSize: 38, color: gold ? '#D8C49A' : '#F5F2EB', lineHeight: 1 }}>{value}</div>
+      <div className="rb" style={{ fontFamily: 'var(--serif)', fontSize: 38, color: gold ? '#D8C49A' : '#F5EFE3', lineHeight: 1 }}>{value}</div>
       <div style={{ fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B3A88E', marginTop: 8 }}>{label}</div>
     </div>
   );
@@ -41,7 +41,7 @@ export default function SalePage() {
   return (
     <main>
       {/* hero */}
-      <section style={{ position: 'relative', overflow: 'hidden', background: '#26312B' }}>
+      <section style={{ position: 'relative', overflow: 'hidden', background: '#3A3123' }}>
         <svg viewBox="0 0 1440 260" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 220, pointerEvents: 'none', opacity: 0.5 }}>
           <path d="M0 260 L220 120 L400 190 L560 90 L760 200 L980 100 L1200 190 L1440 120 L1440 260 Z" fill="none" stroke="#4C5D50" strokeWidth="2" />
           <path d="M0 260 L180 170 L360 210 L560 150 L780 220 L1000 160 L1240 215 L1440 175 L1440 260 Z" fill="#33443B" fillOpacity=".5" />
@@ -63,12 +63,12 @@ export default function SalePage() {
       <section className="rw" style={{ maxWidth: MAX, margin: '0 auto', padding: '70px 40px 20px' }}>
         <div className="rc2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 22 }}>
           {saleOffers.map((o) => (
-            <div key={o.code} style={{ background: '#EEE9DE', border: '1px dashed #A9C0A6', borderRadius: 14, padding: 28, display: 'flex', flexDirection: 'column' }}>
-              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, margin: '0 0 10px', fontWeight: 400, color: '#332F28' }}>{o.title}</h3>
-              <p style={{ color: '#6E6252', fontSize: 14.5, lineHeight: 1.6, margin: '0 0 20px', flex: 1 }}>{o.desc}</p>
-              <div style={{ display: 'inline-flex', alignSelf: 'flex-start', alignItems: 'center', gap: 10, background: '#fff', border: '1px solid #E2D7C4', borderRadius: 8, padding: '9px 14px' }}>
-                <span style={{ fontSize: 12, color: '#6E8A72', letterSpacing: '.1em', textTransform: 'uppercase' }}>Code</span>
-                <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '.06em', color: '#332F28' }}>{o.code}</span>
+            <div key={o.code} style={{ background: '#ECE3D1', border: '1px dashed #B7BE8C', borderRadius: 14, padding: 28, display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, margin: '0 0 10px', fontWeight: 400, color: '#382D21' }}>{o.title}</h3>
+              <p style={{ color: '#6E5C47', fontSize: 14.5, lineHeight: 1.6, margin: '0 0 20px', flex: 1 }}>{o.desc}</p>
+              <div style={{ display: 'inline-flex', alignSelf: 'flex-start', alignItems: 'center', gap: 10, background: '#fff', border: '1px solid #DFD1B7', borderRadius: 8, padding: '9px 14px' }}>
+                <span style={{ fontSize: 12, color: '#7E8757', letterSpacing: '.1em', textTransform: 'uppercase' }}>Code</span>
+                <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '.06em', color: '#382D21' }}>{o.code}</span>
               </div>
             </div>
           ))}

@@ -15,7 +15,7 @@ export function MobileTabBar() {
   const s = useStore();
   const nav = useNav();
   const path = usePathname();
-  const on = '#EAF0E6';
+  const on = '#EDE7D8';
   const off = '#8FA593';
 
   const isHome = path === '/';
@@ -33,7 +33,7 @@ export function MobileTabBar() {
   return (
     <div
       className="rtab"
-      style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 240, background: 'rgba(38,51,43,.97)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderTop: '1px solid rgba(255,255,255,.08)', padding: '8px 4px calc(8px + env(safe-area-inset-bottom))', justifyContent: 'space-around', alignItems: 'stretch' }}
+      style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 240, background: 'rgba(48,38,26,.97)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderTop: '1px solid rgba(255,255,255,.08)', padding: '8px 4px calc(8px + env(safe-area-inset-bottom))', justifyContent: 'space-around', alignItems: 'stretch' }}
     >
       {tabs.map((t) => (
         <div key={t.label} onClick={t.go} style={{ flex: 1, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, padding: '3px 0', color: t.color }}>

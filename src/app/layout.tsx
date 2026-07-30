@@ -4,9 +4,9 @@ import { StoreProvider } from '@/lib/store';
 import { Chrome } from '@/components/Chrome';
 
 export const metadata: Metadata = {
-  title: 'OnRise — Home Decor from the Hills of Darjeeling',
+  title: 'Antoleena — Home Decore from the Hills of Darjeeling',
   description:
-    'OnRise is an online home decor and furniture store — calm, hill-inspired pieces in warm woods and soft greens, made for slow living.',
+    'Antoleena is an online home decor and furniture store — calm, hill-inspired pieces in warm woods and soft greens, made for slow living.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

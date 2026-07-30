@@ -23,7 +23,7 @@ export function Placeholder({
       data-img-fit={fit}
       role="img"
       aria-label={label || undefined}
-      style={{ width: '100%', height: '100%', background: '#EAE0CD', borderRadius: radius, ...style }}
+      style={{ width: '100%', height: '100%', background: '#E6D8C1', borderRadius: radius, ...style }}
     />
   );
 }
